@@ -1,3 +1,5 @@
+[antipatterns](https://www.linkedin.com/pulse/anti-patterns-designing-microservices-manish-sharma-w4fcc/)
+
 𝗘𝘀𝘀𝗲𝗻𝘁𝗶𝗮𝗹 8 Spring Boot microservice patterns
 =====
 Design choices that scale systems reliably.
@@ -5,7 +7,7 @@ Design choices that scale systems reliably.
 Why this matters.
 Spring Boot gives speed, but patterns give resilience and maintainability.
 
-1️** 𝗔𝗣𝗜 𝗚𝗮𝘁𝗲𝘄𝗮𝘆**
+** 𝗔𝗣𝗜 𝗚𝗮𝘁𝗲𝘄𝗮𝘆**
 ↳ Use a gateway to centralize routing, auth, and rate limiting.
 ↳ Spring Cloud Gateway or Kong work well with Spring Boot.
 ↳ Example. Offload CORS, auth, and request aggregation at the gateway.
