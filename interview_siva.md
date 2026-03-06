@@ -1,53 +1,42 @@
 Senior Java / Spring Boot Engineer Interview
 ========
-Q1) 90-Second Introduction
-* Experience:
-* Primary Tech Stack:
-* ERP Integration Experience (SAP / Oracle / QuickBooks):
-* Banking / Payment Experience (Wire / ACH / Reconciliation):
-* Production Scale / Impact:
-* Leadership / Ownership Example:
+* Round 1 — Intro and role alignment
+Q1) Give me a 90-second introduction
 
-Q2) Most Relevant Integration Project
-🔹 Project Overview
-* Business Context:
-* Banking System:
-* ERP System:
-* Integration Type: (REST / MQ / Kafka / SFTP / Batch / Hybrid)
-* Transaction Type: (Wire real-time / ACH batch / Both)
+Focus on:
 
-🔹 Architecture Design
-* Sync vs Async:
-* API Design Pattern:
-* Message / File Format: (ISO 20022 / NACHA / Custom JSON / IDoc / etc.)
-* Transformation Strategy:
-* Database Used:
-* Transaction Management Approach:
-* Idempotency Strategy:
+Java/Spring Boot microservices
 
-🔹 Error Handling & Reconciliation
-* Retry Strategy:
-* Dead-letter / Failed File Handling:
-* Reconciliation Process:
-* Monitoring & Alerts:
+ERP integrations (SAP/Oracle ERP/QuickBooks)
 
-🔹 Biggest Production Risk
-* Risk:
-* Why It Was Critical:
-* Mitigation Strategy:
-* Final Outcome:
+Banking payments (Wire + ACH)
 
-Q3) Secure Financial API Design
-🔐 Authentication & Authorization
-* (OAuth2 / JWT / mTLS / API Gateway / RBAC / etc.)
-🔐 Data Protection
-* (Encryption at rest / TLS / Field-level encryption / Tokenization)
-🔐 Idempotency & Replay Protection
-* (Idempotency keys / Nonce / Request hashing / Dedup table)
-🔐 Audit & Compliance
-* (Audit logs / Trace IDs / SOX controls / PCI considerations)
-🔐 Rate Limiting & Abuse Protection
-* (Throttling / Circuit breakers / IP controls)
+Production support / incident handling
 
-Once you submit your filled response, I will proceed to:
-Round 2 — Deep Dive: Spring Transactions, ERP Patterns, and Payment Workflow Design
+One measurable outcome (latency, scale, cost, reliability)
+
+Q2) Pick one integration project you’ve done that’s closest to this role
+
+Answer:
+
+What systems were involved? (banking side + ERP side)
+
+What integration pattern did you use? (API, messaging, file/SFTP, CDC, etc.)
+
+Biggest production risk and how you mitigated it
+
+Q3) What’s your approach to building secure APIs for financial data?
+
+Touch on:
+
+AuthN/AuthZ (OAuth2/JWT/mTLS)
+
+Data protection (PII, encryption)
+
+Auditability and non-repudiation
+
+Rate limiting / throttling
+
+Idempotency
+
+Reply with your answers to Q1–Q3. When you’re done, I’ll move to Round 2 and start probing Spring internals + transactions.
