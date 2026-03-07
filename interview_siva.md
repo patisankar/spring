@@ -1,35 +1,78 @@
 Senior Java / Spring Boot Engineer Interview
 ========
-* Round 1 — Intro and role alignment
-Q1) Give me a 90-second introduction
+How does auto-config works in spring boot
+==========
+Spring Boot auto-configuration automatically configures beans based on:
 
-Focus on:
+Classpath contents
 
-Java/Spring Boot microservices
+Existing beans in the context
 
-ERP integrations (SAP/Oracle ERP/QuickBooks)
+Application properties
 
-Banking payments (Wire + ACH)
+Environment conditions
 
-Production support / incident handling
+The goal is:
 
-One measurable outcome (latency, scale, cost, reliability)
+“Convention over configuration” — configure sensible defaults, allow override when needed.
 
-Q2) Pick one integration project you’ve done that’s closest to this role
+**Followup question:**
 
-Answer:
+Spring Boot startup can be divided into 7 major phases:
 
-What systems were involved? (banking side + ERP side)
+Create SpringApplication
 
-What integration pattern did you use? (API, messaging, file/SFTP, CDC, etc.)
+Prepare environment
 
-Biggest production risk and how you mitigated it
+Create ApplicationContext
 
-Q3) What’s your approach to building secure APIs for financial data?
+Apply initializers
 
-Touch on:
+Load bean definitions
 
-AuthN/AuthZ (OAuth2/JWT/mTLS)
+Refresh context (core Spring lifecycle)
+
+Execute runners
+
+### Why does @Transactional sometimes “not work”? List 4 real causes.
+Self-Invocation
+Method Visibility (Private / Protected Methods)
+Wrong Exception Type (Rollback Not Triggered)
+Called Outside Spring Context 
+
+### What is the difference between:
+
+Filter
+
+Interceptor
+
+AOP advice
+
+### How does Spring manage bean lifecy
+[Ref](https://medium.com/@aravindcsebe/understanding-spring-bean-life-cycle-a-complete-guide-91f8ddc3d70e)
+
+### SIngle table  vs join table inheritance?
+### How do you handle:
+
+Partial failures?
+
+Idempotency?
+
+Retries?
+
+Consistency?
+
+Strategies for Handling Data Consistency
+
+
+[Retry](https://www.geeksforgeeks.org/system-design/retries-strategies-in-distributed-systems)
+[Cosistency](https://www.linkedin.com/pulse/how-handle-data-consistency-microservices-environment-vintageglobal-rei5e/)
+
+
+
+
+
+[AuthN/AuthZ (OAuth2/JWT/mTLS)](https://medium.com/@SyntaxSageNik/authentication-mechanisms-f58ded267f5c)
 
 Data protection (PII, encryption)
 
@@ -39,4 +82,4 @@ Rate limiting / throttling
 
 Idempotency
 
-Reply with your answers to Q1–Q3. When you’re done, I’ll move to Round 2 and start probing Spring internals + transactions.
+
