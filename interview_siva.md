@@ -1,7 +1,7 @@
 Senior Java / Spring Boot Engineer Interview
 ========
-How does auto-config works in spring boot
-==========
+- How does auto-config works in spring boot?
+
 Spring Boot auto-configuration automatically configures beans based on:
 
 Classpath contents
@@ -56,7 +56,37 @@ AOP advice
 
 [Spring batch](https://medium.com/@meet2sudhakar/here-are-the-key-technical-advantages-of-using-the-spring-batch-framework-from-a-developers-7410d795ce60)
 ### How does Hashmap works
-HashMap is implemented as an array of buckets where each bucket stores entries using a linked list, and in JDK 8+, it converts to a red-black tree when collisions exceed a threshold. It uses the key’s hashCode to compute an index using bitwise operations for O(1) average time complexity. It resizes when the load factor exceeds 0.75 and is not thread-safe.
+Let’s break it down in the way interviewers expect 👇
+
+🔹 1️⃣ HashMap stores data in key–value pairs
+But internally, it uses an array of buckets.
+
+🔹 2️⃣ When you put(key, value):
+
+* The hashCode() of the key is calculated
+* That hash is converted into an index
+* The value is stored in that bucket on the calculated index
+
+🔹 3️⃣ What if two keys get the same index? (Collision)
+This is where many candidates struggle.
+
+Before Java 8 → LinkedList was used.
+After Java 8 → If collisions exceed a threshold, it converts into a Balanced Tree (Red-Black Tree) for better performance.
+
+🔹 4️⃣ Why is HashMap fast?
+Average time complexity:
+O(1) for get() and put()
+
+But in worst case (many collisions), it can go to O(log n).
+
+🔹 5️⃣ Important Interview Points Most People Forget:
+
+* HashMap is NOT synchronized
+* It allows one null key and multiple null values
+* Performance depends on proper hashCode() and equals() implementation
+
+💡 Interview Tip:
+If you explain collisions + Java 8 tree optimization clearly, you instantly stand out from average candidates.
 
 ### How do you handle:
 
