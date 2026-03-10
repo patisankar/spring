@@ -52,6 +52,12 @@ AOP advice
 [Ref](https://medium.com/@aravindcsebe/understanding-spring-bean-life-cycle-a-complete-guide-91f8ddc3d70e)
 
 ### SIngle table  vs join table inheritance?
+[Transaction](https://medium.com/@AlexanderObregon/controlling-transaction-boundaries-with-transactional-propagation-and-isolation-explained-976eb35f368)
+
+[Spring batch](https://medium.com/@meet2sudhakar/here-are-the-key-technical-advantages-of-using-the-spring-batch-framework-from-a-developers-7410d795ce60)
+### How does Hashmap works
+HashMap is implemented as an array of buckets where each bucket stores entries using a linked list, and in JDK 8+, it converts to a red-black tree when collisions exceed a threshold. It uses the key’s hashCode to compute an index using bitwise operations for O(1) average time complexity. It resizes when the load factor exceeds 0.75 and is not thread-safe.
+
 ### How do you handle:
 
 Partial failures?
