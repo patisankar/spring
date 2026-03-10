@@ -105,9 +105,6 @@ Strategies for Handling Data Consistency
 [Cosistency](https://www.linkedin.com/pulse/how-handle-data-consistency-microservices-environment-vintageglobal-rei5e/)
 
 
-
-
-
 [AuthN/AuthZ (OAuth2/JWT/mTLS)](https://medium.com/@SyntaxSageNik/authentication-mechanisms-f58ded267f5c)
 
 Data protection (PII, encryption)
@@ -117,5 +114,28 @@ Auditability and non-repudiation
 Rate limiting / throttling
 
 Idempotency
+
+### Spring Batch
+[Doc](https://docs.spring.io/spring-batch/reference/spring-batch-architecture.html)
+
+
+### Microservice Design patterns
+<img width="477" height="647" alt="image" src="https://github.com/user-attachments/assets/c2b913b5-7cc6-44e0-ae51-c7864cd2c454" />
+
+1. **Database Per Service Pattern**: Each service, such as "Orders" or "Users," maintains its own private database. This approach ensures that if one database crashes, it does not impact the entire system. Services remain independent and can utilize different database types as needed.
+
+2. **API Gateway Pattern**: Serving as a single entry point for all requests from applications or websites, the API Gateway simplifies communication. Instead of a mobile app connecting to multiple microservices, it communicates with the Gateway, which directs traffic appropriately.
+
+3. **BFF (Backend For Frontend) Pattern**: This pattern creates tailored backend helpers for different devices, ensuring that data sent is optimized for each device's specific needs, such as screen size and internet speed.
+
+4. **CQRS (Command Query Responsibility Segregation)**: By separating data writing from reading, this pattern allows for optimization of one database for fast saves (Commands) and another for quick searches (Queries).
+
+5. **Event Sourcing Pattern**: Instead of merely storing the current state, this pattern captures every change as a sequence of events. This approach provides a comprehensive history and enables reconstruction of the system's state at any point in time.
+
+6. **Saga Pattern**: Managing long-running transactions across multiple services, the Saga Pattern ensures consistency. If a booking fails, such as a hotel reservation, it automatically cancels or refunds related transactions, like flight bookings.
+
+7. **Sidecar Pattern**: This involves attaching a helper container to the main service to handle additional tasks, such as logging or security. This allows the main service to focus on its core responsibilities without being burdened by ancillary code.
+
+8. **Circuit Breaker Pattern**: Similar to an electrical breaker, this pattern halts requests to a failing service, preventing a domino effect where one slow service causes the entire system to hang.
 
 
