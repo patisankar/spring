@@ -121,7 +121,7 @@ Idempotency
 
 ### Microservice Design patterns
 <img width="477" height="647" alt="image" src="https://github.com/user-attachments/assets/c2b913b5-7cc6-44e0-ae51-c7864cd2c454" />
-
+[ref](https://microservices.io/patterns/data/saga.html)
 1. **Database Per Service Pattern**: Each service, such as "Orders" or "Users," maintains its own private database. This approach ensures that if one database crashes, it does not impact the entire system. Services remain independent and can utilize different database types as needed.
 
 2. **API Gateway Pattern**: Serving as a single entry point for all requests from applications or websites, the API Gateway simplifies communication. Instead of a mobile app connecting to multiple microservices, it communicates with the Gateway, which directs traffic appropriately.
